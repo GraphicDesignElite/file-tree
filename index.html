@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File Explorer Demo</title>
+  <link href="css/file-explore.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</style>
+</head>
+
+<body>
+<style>
+  body{font-family:Arial, Helvetica, sans-serif;}
+</style>
+<div class="container">
+<h1>File List</h1>
+<ul class="file-tree">
+    <li><a href="#">US</a>
+    <ul>
+        <li><a href="#">New York</a> 
+          <ul>
+              <li><a href="#">Corporation</a>
+                <ul>
+                    <li> <a href="#link5">Link 5</a> </li>
+                    <li> <a href="#link6">Link 6</a> </li>
+                    <li> <a href="#link7">Link 7</a> </li>
+                    <li> <a href="#link8">Link 8</a> </li>
+                    <li> <a href="#">Deeper</a>
+                      <ul>
+                          <li><a href="#">Link 1</a> </li>
+                          <li><a href="#">Link 2</a> </li>
+                          <li><a href="#">Link 3</a> </li>
+                          <li><a href="#">Link 4</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+              <li><a href="#">LLC</a>
+                <ul>
+                    <li> <a href="#link5">Link 5</a> </li>
+                    <li> <a href="#link6">Link 6</a> </li>
+                    <li> <a href="#link7">Link 7</a> </li>
+                    <li> <a href="#link8">Link 8</a> </li>
+                    <li> <a href="#">Deeper</a>
+                      <ul>
+                          <li><a href="#">Link 1</a> </li>
+                          <li><a href="#">Link 2</a> </li>
+                          <li><a href="#">Link 3</a> </li>
+                          <li><a href="#">Link 4</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+
+          </ul>
+        
+        </li>
+        <li><a href="#link2">Link 2</a> </li>
+        <li><a href="#link3">Link 3</a> </li>
+        <li><a href="#link4">Link 4</a> </li>
+      </ul>
+    </li>
+    <li><a href="#">Canada</a>
+    <ul>
+        <li><a href="#">Link 1</a> </li>
+        <li><a href="#">Link 2</a> </li>
+        <li><a href="#">Link 3</a> </li>
+        <li><a href="#">Link 4</a> </li>
+      </ul></li>
+  </ul>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script src="js/file-explore.js"></script> 
+<script>
+$(document).ready(function() {
+            $(".file-tree").filetree();
+	        });
+</script>
+
+</body>
+</html>
