@@ -5,7 +5,7 @@
             animationSpeed: 'fast',
             collapsed: true,
             console: false,
-			removeUselessLink: true
+            removeUselessLink: true
         };
         var methods = {
             init: function(options) {
@@ -20,13 +20,16 @@
                     $fileList.addClass('file-list');
 
                     var $fileListLi = $fileList.find('li');
-					if (options.removeUselessLink) {
-						// Remove unwanted A links (remove all HTML) on LI without UL as child
-						$fileListLi.not(':has(ul)').each(function(el) {
-							var liWithoutUL = $(this);
-							liWithoutUL.html(liWithoutUL.text());
-						});
-					}
+                    if (options.removeUselessLink) {
+                        // Remove unwanted A links (remove all HTML) on LI without UL as child
+                        $fileListLi.not(':has(ul)').each(function(el) {
+                            var liWithoutUL = $(this);
+                            // Remove only if links doesn't have a real link
+			    if (liWithoutUL.find('a').prop('href') === '#') {
+			        liWithoutUL.html(liWithoutUL.text());
+			    }
+                        });
+                    }
                     // For the others LI, catch the Click events
                     $fileListLi.has('ul').addClass(CSSClass).on('click', 'a[href="#"]', function(e) {
                         // Add a click override for the folder root links
