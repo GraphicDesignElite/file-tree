@@ -61,5 +61,5 @@ li.folder-root.closed>ul{
 li.folder-root.open>ul{
    opacity:1;
    display:block;
-   max-height:1000px;
+   max-height:inherit;
 }
